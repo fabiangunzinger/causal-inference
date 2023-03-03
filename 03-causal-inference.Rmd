@@ -1,0 +1,79 @@
+# Causal Inference
+
+
+```{r child=c("_causal-inference-preliminaries.Rmd"), echo=FALSE}
+```
+
+
+## Regression discontinuity designs
+
+### Use cases
+
+- Identifiable forcing variable
+
+### Considerations
+
+- Functional form: use local linear methods
+
+- Choice of bandwidth: use asymptotic expansion
+
+- Assessing  (internal) validity: use suplementary analysis
+
+- Assessing external validity: assess credibility of extrapolation to other subpopulations
+
+Notes based on @athey2017state
+
+
+## Synthetic control methods
+
+### Use case
+
+- The classic use case is a setting where a single aggregated unit (school district, city, region, country) has been treated and we have data on a relatively small number of possible comparison units. In such a case, synthetic control creates a control unit as a weighted average of the available comparison units, which can result in a better control group than if a single such unit were used as a control (as in a traditional DiD setting).
+
+### Considerations
+
+- Weighing function to create controls: @abadie2010synthetic use minimal distance, @doudchenko2016balancing use show that alternatives like best subset regression, LASSO, and elastic nets perform better in settings with a large number of potential control units.
+
+- Functional form: @athey2006identificaiton provide non-linear alternative.
+
+
+### R packages
+
+- [Synth](https://dspace.mit.edu/handle/1721.1/71234) R implementation by Abadie and co-authors.
+
+- [tidysynth](https://github.com/edunford/tidysynth) Nice looking improved implementation of Synth
+
+
+## Matching
+
+### Aim and use case
+
+- Preprocess observational data such that it resembles more closely data that would have resulted from a perfectly blocked (and possibly randomised) experiment, and thus break the relationship between outcomes and pre-treatment controls.
+
+### Considerations
+
+- Balance checks: successful matching removes the relationship between outcomes and pre-treatment controls that's often inherent in non-experimental data. To check whetehr this succeeded, we need to check that the distribution of pre-treatment controls is the same within matched treatment and control units.
+
+- Analysis: using difference in mean test is only appropriate if we performed exact matching, which is often not feasible. For all other forms of matching, use model with controls to estimate treatment effects.
+
+### Software
+
+- @stuart2011matchit
+
+
+## Matching vs synthetic controls vs regression
+
+Based on excellent discussion in introduction to @abadie2021penalized.
+
+Synthetic control vs nearest-neighbour matching:
+
+- Similarities: Weights for control units are positive, sum to one, and are often sparse. This allows for interpretability of the weights.
+
+- Differences: synthetic control doesn't impose a fixed number of control units, and, instead of using a simple average of the control units with equal weights, it creates a control unit using a weighted average of all control units such as to minimise the discrepancy between treated and control units in the values of the matching variables.
+
+
+Synthetic control vs regression:
+
+  - Similarities: both effectively use weights
+
+- Regression weights are implicit and much harder to interpret.
