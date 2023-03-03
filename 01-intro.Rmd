@@ -1,4 +1,4 @@
-# Introduction {#intro}
+# Bookdown tips
 
 You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
 
@@ -37,9 +37,6 @@ pd.DataFrame({'a': [1, 2, 3], 'b': [3, 4, 5]})
 You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
 
 
-# Methods
-
-We describe our methods in this chapter.
 
 Math can be added in body using usual syntax like this 
 
