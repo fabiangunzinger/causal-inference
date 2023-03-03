@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.2.10)  3 MAR 2023 13:53
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.2.10)  3 MAR 2023 14:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -867,7 +867,16 @@ LaTeX Warning: Reference `methods' on page 7 undefined on input line 161.
 
 File: 01-intro_files/figure-latex/nice-fig-1.pdf Graphic file (type pdf)
 <use 01-intro_files/figure-latex/nice-fig-1.pdf>
-[7] [8] [9] [10
+[7] [8]
+
+Package natbib Warning: Citation `R-bookdown' on page 9 undefined on input line
+ 268.
+
+
+Package natbib Warning: Citation `xie2015' on page 9 undefined on input line 26
+8.
+
+[9] [10
 
 ]
 Chapter 3.
@@ -898,10 +907,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 19307 strings out of 477696
- 356740 string characters out of 5841668
- 824427 words of memory out of 5000000
- 39677 multiletter control sequences out of 15000+600000
+ 19301 strings out of 477696
+ 356641 string characters out of 5841668
+ 824495 words of memory out of 5000000
+ 39671 multiletter control sequences out of 15000+600000
  475750 words of font info for 86 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  86i,8n,121p,1023b,408s stack positions out of 10000i,1000n,20000p,200000b,200000s
