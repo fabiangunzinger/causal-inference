@@ -1,0 +1,6 @@
+## Paradigms
+
+
+### Neyman-Rubin causal model
+
+### Directed Acyclic Graphs
