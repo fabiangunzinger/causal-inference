@@ -10,6 +10,17 @@
 ```{r child=c("sections/causal-inference-regression-discontinuity.Rmd"), echo=FALSE}
 ```
 
+```{r child=c("sections/causal-inference--resources"), echo=FALSE}
+```
+
+
+
+
+
+
+
+
+
 
 
 
